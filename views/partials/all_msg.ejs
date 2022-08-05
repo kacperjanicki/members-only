@@ -1,0 +1,15 @@
+<% posts.forEach((post)=>{ %>
+<div class="post">
+    <% if(!user || !user.membership_status){ %>
+    <div>You need to be a member to view posts, <a href="/join">Gain member privileges</a></div>
+    <% }else{ %>
+    <div><%= post.body %></div>
+    <% } %>
+
+    <div class="info">
+        Posted by: <%= post.author %><br /><span class="date"
+            ><%= String(post.timestamp).split("G")[0] %></span
+        >
+    </div>
+</div>
+<% }) %>

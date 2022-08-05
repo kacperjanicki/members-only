@@ -13,5 +13,9 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    membership_status: {
+        type: Boolean,
+        default: false,
+    },
 });
 module.exports = mongoose.model("User", userSchema);

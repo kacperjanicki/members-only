@@ -1,0 +1,14 @@
+<header class="nav">
+    <a href="/">Home</a>
+    <% if(user && !user.membership_status){ %>
+    <a href="/join">Be a member</a>
+    <% } %>
+    <a href="/posts/new">New post</a>
+    <a href="/posts/">Posts</a>
+    <% if(user){ %>
+    <a href="/logout">Log out</a>
+    <% }else if(!user){ %>
+    <a href="/login">Login</a>
+    <a href="/signup">Sign up</a>
+    <% } %>
+</header>
