@@ -1,8 +1,17 @@
 <%- include('./partials/error_msg.ejs') %>
-<h1>Login</h1>
-<form action="/login" method="POST">
-    <div><label for="email">Email</label><input type="email" name="email" required /></div>
-    <div><label for="password">Password</label><input type="password" name="password" required /></div>
-    <button>Log in</button>
-    <a href="/signup">Create an account</a>
-</form>
+
+<div class="post">
+    <h3>Login</h3>
+    <form action="/login" method="POST">
+        <div class="form form-post">
+            <div><label for="email">Email</label><input type="email" name="email" required /></div>
+            <div>
+                <label for="password">Password</label><input type="password" name="password" required />
+            </div>
+            <div>
+                <button>Log in</button>
+                <a href="/signup">Create an account</a>
+            </div>
+        </div>
+    </form>
+</div>

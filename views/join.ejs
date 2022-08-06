@@ -1,5 +1,8 @@
-<% if(!user){ %><a href="/login">Log in</a> to access this page <% }else if(user && user.membership_status){
-%> You already have member privileges,
+<% if(!user){ %>
+<div class="post form-post">
+    <span> <a href="/login">Log in</a> to access this page </span>
+</div>
+<% }else if(user && user.membership_status){ %> You already have member privileges,
 <a href="/">Go back</a>
 <% }else if(user && !user.membership_status){%>
 <form action="/join" method="POST">

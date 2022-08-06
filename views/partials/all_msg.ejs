@@ -1,5 +1,5 @@
-<% posts.forEach((post)=>{ %>
-<div class="post">
+<% if(user){ %> <%- include('./new_post.ejs') %> <% } %> <% posts.forEach((post)=>{ %>
+<div class="post post-mainpage">
     <% if(!user || !user.membership_status){ %>
     <div>You need to be a member to view posts, <a href="/join">Gain member privileges</a></div>
     <% }else{ %>
